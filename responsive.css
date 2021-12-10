@@ -1,0 +1,11 @@
+@media (max-width:660px) {
+    #navbar ul
+    {
+        grid-template-columns: 1fr;
+    }
+    .section
+    {
+        grid-template-areas: "showcase showcase"
+        "top-container-a top-container-b";
+    }
+}

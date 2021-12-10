@@ -1,0 +1,150 @@
+:root
+{
+    --shadow:0 1px 5px rgba(104,104,104,0.8)
+}
+*
+{
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgb(172, 172, 172,0.6);
+}
+.btn
+{
+    background-color: black;
+    color: white;
+    padding: 0.6rem 1.3rem;
+    font-size: 0.9rem;
+}
+img
+{
+    max-width: 100%;
+}
+.bdr
+{
+    border:2px solid black;
+}
+.container
+{
+    display:grid;
+    grid-gap: 2rem;
+    grid-template-areas: "navbar navbar navbar navbar"
+    "section section section section"
+    "icons icons icons icons"
+    "portfolio portfolio portfolio portfolio";
+    margin: 20px;
+}
+#navbar ul{
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    /* margin:0px 20px; */
+}
+#navbar a
+{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: rgb(255, 253, 253) ;
+    box-shadow: var(--shadow);
+    transition: all 0.2s ease-out;
+}
+#navbar a:hover
+{
+    transform: scale(1.05);
+    background-color: black;
+    color: rgb(255, 253, 253) ;;
+}
+#navbar
+{
+    grid-area: navbar;
+}
+.section
+{
+    grid-area: section;
+    display: grid;
+    grid-template-areas: "showcase showcase top-container-a"
+    "showcase showcase top-container-b";
+    grid-gap:1rem;
+}
+.icons
+{
+    grid-area: icons;
+}
+.portfolio
+{
+    grid-area: portfolio;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    grid-gap:1.25rem;
+    justify-content: center;
+}
+.showcase
+{
+    background: url(/images/pic2.jpg);
+    background-size:cover;
+    background-position:center;
+    padding:3rem;
+    grid-area:showcase;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+}
+.showcase h1
+{
+    margin-bottom: 2rem;
+}
+.showcase p
+{
+    margin-bottom: 2rem;
+    font-size:1.2rem;
+}
+.top-container-a
+{
+    grid-area: top-container-a;
+    background-color:rgb(255, 253, 253)  ;
+    padding: 23px;
+    display:grid;
+    align-items: center;
+    /* vertically center karega align items just as flex-box */
+    justify-content: center;
+    box-shadow: var(--shadow);
+    /* horizontally center kardega just as flex box */
+}
+.top-container-a p,.top-container-b p
+{
+    font-size: 1.5em;
+}
+.top-container-b
+{
+    grid-area: top-container-b;
+    background-color:rgb(255, 253, 253)  ;
+    padding: 23px;
+    display:grid;
+    box-shadow: var(--shadow);
+    align-items: center;
+    /* vertically center karega align items just as flex-box */
+    justify-content: center;
+    /* horizontally center kardega just as flex box */
+}
+.icons
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 20px;
+}
+.box
+{
+    text-align: center;
+    background-color: white;
+}
